@@ -1,7 +1,11 @@
 :root {
-  --bgColor: #ffde59;
+  /* --bgColor: #ffde59;
   --color: #faf6e8;
-  --darkLinen: #f8ae64;
+  --darkLinen: #f8ae64; */
+
+  --darkGrey: #444;
+  --lightGrey: #999;
+  --white: #fff;
 }
 
 * {
@@ -26,16 +30,16 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-track {
-  background: var(--color);
+  background: var(--white);
 }
 
 html::-webkit-scrollbar-thumb {
-  background: var(--bgColor);
+  background: var(--lightGrey);
   border-radius: 5px;
 }
 
 body {
-  background: var(--bgColor);
+  background: var(--lightGrey);
   overflow-x: hidden;
   padding-left: 35rem;
 }
@@ -52,7 +56,7 @@ header {
   z-index: 1000;
   height: 100%;
   width: 35rem;
-  background: var(--color);
+  background: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,16 +70,18 @@ header .user img {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
-  border: 0.7rem solid var(--darkLinen);
+  border: 0.7rem solid var(--lightGrey);
 }
 
 header .user .name {
   font-size: 3.5rem;
+  color: var(--darkGrey);
 }
 
 header .user .post {
   font-size: 2rem;
   font-weight: bolder;
+  color: var(--darkGrey);
 }
 
 header .navbar ul {
@@ -89,13 +95,60 @@ header .navbar ul li a {
   width: 100%;
   padding: 1rem;
   margin: 1.5rem 0;
-  background: var(--darkLinen);
-  color: var(--color);
+  background: var(--lightGrey);
+  color: var(--white);
   font-size: 2rem;
   font-weight: bolder;
   border-radius: 5rem;
 }
 
 header .navbar ul li a:hover {
-  background: var(--bgColor);
+  background: var(--darkGrey);
+  color: var(--white);
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  padding: 0 15rem;
+}
+
+.home h3 {
+  font-size: 2.5rem;
+  color: var(--white);
+}
+
+.home h1 {
+  font-size: 5rem;
+  color: var(--white);
+}
+
+.home h1 span {
+  color: var(--darkGrey);
+}
+
+.home p {
+  font-size: 2rem;
+  color: var(--white);
+  padding: 1rem 0;
+}
+
+.btn {
+  padding: 0.7rem 3rem;
+  background: var(--white);
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 2rem;
+  border-radius: 5rem;
+}
+
+.btn i {
+  padding: 0 0.5rem;
+  font-size: 1.8rem;
+}
+
+.btn:hover {
+  background: var(--darkGrey);
+  color: var(--white);
 }
