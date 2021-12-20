@@ -1,8 +1,5 @@
 :root {
-  /* --bgColor: #ffde59;
-  --color: #faf6e8;
-  --darkLinen: #f8ae64; */
-
+  --black: #000;
   --darkGrey: #444;
   --lightGrey: #999;
   --white: #fff;
@@ -23,6 +20,7 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
@@ -47,6 +45,18 @@ body {
 section {
   min-height: 100vh;
   padding: 1rem;
+}
+
+.heading {
+  text-align: center;
+  margin: 0 6rem;
+  font-size: 4rem;
+  padding: 1rem;
+  border-bottom: 0.1rem solid var(--white);
+}
+
+.heading span {
+  color: var(--white);
 }
 
 header {
@@ -151,4 +161,56 @@ header .navbar ul li a:hover {
 .btn:hover {
   background: var(--darkGrey);
   color: var(--white);
+}
+
+.about .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+.about .row .info {
+  flex: 1 1 48rem;
+  padding: 2rem 1rem;
+  padding-left: 6rem;
+}
+
+.about .row .info h3 {
+  font-size: 2rem;
+  color: var(--white);
+  padding: 1rem 0;
+  font-weight: normal;
+}
+
+.about .row .info h3 span {
+  padding: 0 0.5rem;
+  color: var(--black);
+  font-weight: bold;
+}
+
+.about .row .counter {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 48rem;
+  flex-wrap: wrap;
+}
+
+.about .row .counter .box {
+  width: 20rem;
+  background: var(--white);
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.about .row .counter .box span {
+  font-size: 2rem;
+  color: var(--lightGrey);
+}
+
+.about .row .counter .box h3 {
+  font-size: 2rem;
+  color: var(--black);
 }
