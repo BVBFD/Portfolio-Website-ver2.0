@@ -362,3 +362,11 @@ header .navbar ul li a:hover {
   padding: 0.5rem;
   border-radius: 50%;
 }
+
+.top:hover {
+  background: var(--white);
+}
+
+.top:active {
+  transform: scale(0.8);
+}
