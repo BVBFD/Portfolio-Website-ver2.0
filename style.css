@@ -24,7 +24,7 @@ html {
 }
 
 html::-webkit-scrollbar {
-  width: 1rem;
+  width: 0.7rem;
 }
 
 html::-webkit-scrollbar-track {
@@ -215,6 +215,65 @@ header .navbar ul li a:hover {
   color: var(--black);
 }
 
+.about .row .programmingPart {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--white);
+  margin: 6rem 6rem 0 6rem;
+  padding: 2rem;
+  padding-bottom: 4rem;
+  border-radius: 15px;
+}
+
+.about .row .programmingPart .langBox {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.about .row .programmingPart .langBox span {
+  flex: 1 1 10%;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--lightGrey);
+}
+
+.about .row .programmingPart .langBox .langBar {
+  flex: 1 1 90%;
+  height: 100%;
+  background: var(--darkGrey);
+  position: relative;
+  border-radius: 15px;
+}
+
+.about .row .programmingPart .langBox .langBar::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: calc(var(--i));
+  height: 100%;
+  background: var(--lightGrey);
+  border-radius: 15px;
+  animation: animate 3s ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: calc(var(--i));
+  }
+}
+
 .career .box-container {
   display: flex;
   align-items: center;
@@ -250,6 +309,7 @@ header .navbar ul li a:hover {
   font-size: 1.4rem;
   color: var(--black);
   padding: 1rem 0;
+  text-transform: none;
 }
 
 .career .box-container .box i {
@@ -345,6 +405,7 @@ header .navbar ul li a:hover {
   color: var(--white);
   padding: 1rem 0;
   font-weight: normal;
+  text-transform: none;
 }
 
 .contact .row .content .info h3 i {
@@ -369,4 +430,101 @@ header .navbar ul li a:hover {
 
 .top:active {
   transform: scale(0.8);
+}
+
+/* media queries  */
+
+@media (max-width: 1280px) {
+  html {
+    font-size: 55%;
+  }
+
+  .home {
+    padding: 1rem 4rem;
+  }
+
+  .about .row .info {
+    padding: 0 0 2rem 2rem;
+  }
+
+  .about .row .programmingPart {
+    margin: 2rem 2rem 0 2rem;
+  }
+
+  .about .row .programmingPart .langBox {
+    display: block;
+  }
+
+  .about .row .programmingPart .langBox .langBar {
+    height: 80%;
+  }
+
+  .about .row .counter .box {
+    width: 20rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about .row .counter .box {
+    width: 30rem;
+  }
+
+  .portfolio .box-container .box {
+    height: fit-content;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 991px) {
+  header {
+    left: -120%;
+  }
+
+  #menu {
+    display: block;
+  }
+
+  header.toggle {
+    left: 0%;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  .about .row .counter .box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 400px) {
+  header {
+    width: 100vw;
+  }
+
+  .heading {
+    margin: 0 3rem;
+  }
+
+  .about .row .counter .box {
+    width: 100%;
+  }
+
+  .education .box-container .box {
+    width: 100%;
+  }
+
+  .portfolio .box-container .box {
+    width: 100%;
+  }
+
+  .contact .row form {
+    margin: 3rem 0;
+  }
 }
