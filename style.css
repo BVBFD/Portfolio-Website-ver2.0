@@ -274,7 +274,7 @@ header .navbar ul li a:hover {
   }
 }
 
-.career .box-container {
+.career .career-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -283,7 +283,7 @@ header .navbar ul li a:hover {
   padding-left: 3rem;
 }
 
-.career .box-container .box {
+.career .career-container .box {
   width: 27rem;
   margin: 4rem 1rem;
   padding-left: 4rem;
@@ -291,7 +291,7 @@ header .navbar ul li a:hover {
   position: relative;
 }
 
-.career .box-container .box span {
+.career .career-container .box span {
   font-size: 1.3rem;
   background: var(--darkGrey);
   color: var(--white);
@@ -299,20 +299,20 @@ header .navbar ul li a:hover {
   padding: 0.5rem 2.5rem;
 }
 
-.career .box-container .box h3 {
+.career .career-container .box h3 {
   font-size: 2rem;
   color: var(--white);
   padding-top: 1.5rem;
 }
 
-.career .box-container .box p {
+.career .career-container .box p {
   font-size: 1.4rem;
   color: var(--black);
   padding: 1rem 0;
   text-transform: none;
 }
 
-.career .box-container .box i {
+.career .career-container .box i {
   position: absolute;
   top: -1.5rem;
   left: -2.5rem;
@@ -326,30 +326,92 @@ header .navbar ul li a:hover {
   background: var(--black);
 }
 
-.portfolio .box-container {
+.portfolio .chooseBox {
+  width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio .chooseBox .btn {
+  margin: 3rem 2rem 3rem 2rem;
+}
+
+.portfolio .frontEnd-container {
+  display: none;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   padding: 2rem 0;
 }
 
-.portfolio .box-container .box {
-  height: 20rem;
+.portfolio .frontEnd-container.active {
+  display: flex;
+}
+
+.portfolio .frontEnd-container .row {
+  display: flex;
+  align-items: center;
+}
+
+.portfolio .frontEnd-container .box {
+  height: 30rem;
   width: 26rem;
   border-radius: 1rem;
-  margin: 2rem;
   overflow: hidden;
   cursor: pointer;
 }
 
-.portfolio .box-container .box img {
+.portfolio .frontEnd-container .swiper-slide-active {
+  height: 35rem;
+}
+
+.portfolio .frontEnd-container .box img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.portfolio .box-container .box:hover img {
+.portfolio .frontEnd-container .box:hover img {
+  transform: scale(1.2);
+}
+
+.portfolio .backEnd-container {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+.portfolio .backEnd-container.active {
+  display: flex;
+}
+
+.portfolio .backEnd-container .row {
+  display: flex;
+  align-items: center;
+}
+
+.portfolio .backEnd-container .box {
+  height: 30rem;
+  width: 26rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.portfolio .backEnd-container .swiper-slide-active {
+  height: 35rem;
+}
+
+.portfolio .backEnd-container .box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.portfolio .backEnd-container .box:hover img {
   transform: scale(1.2);
 }
 

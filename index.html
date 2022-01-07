@@ -13,6 +13,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
     <link rel="icon" type="image/png" href="./images/Logo-big.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js" integrity="sha512-pY1t/ADgTwbfGbw0+mRGd33EroA5YgRUWhQNFpPIAdBzyoSb38FsFrf4wBTcS3GFPdTfgtpRrbGCkdl2C2OXYA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -115,7 +117,7 @@
     <section class="career" id="career">
       <h1 class="heading">My <span>Education and Career</span></h1>
 
-      <div class="box-container">
+      <div class="career-container">
         <div class="box">
           <i class="fas fa-graduation-cap"></i>
           <span>2021.12 ~</span>
@@ -173,11 +175,11 @@
           <span>2010.03 ~ 2018.02</span>
           <h3>University Graduate</h3>
           <p>
-            1. I majored about Finance.
+            1. I majored Finance.
           </br>&ensp;Ex) GPA: 3.2 / 4.5
           </p>
           <p>
-            2. I majored about Trade English.
+            2. I majored Trade English.
           </br>&ensp;Ex) Trade English Level 1
           </p>
           <h4 style="color: white;">Refer to my CV For more details</h4>
@@ -203,30 +205,63 @@
 
     <section class="portfolio" id="portfolio">
       <h1 class="heading">My <span>Portfolio</span></h1>
+      <div class="chooseBox">
+        <span class="btn" data-field="frontEnd-container">Front-End</span>
+        <span class="btn" data-field="backEnd-container">Back-End</span>
+      </div>
+      <div class="swiper mySwiper frontEnd-container active">
+        <div class="swiper-wrapper row">
+          <div class="swiper-slide box">
+            <img src="./images/Logo-big.png" alt="" />
+          </div>
 
-      <div class="box-container">
-        <div class="box">
-          <img src="./images/Logo-big.png" alt="">
+          <div class="swiper-slide box">
+            <img src="./images/Logo-big.png" alt="" />
+          </div>
+
+          <div class="swiper-slide box">
+            <img src="./images/Logo-big.png" alt="" />
+          </div>
+
+          <div class="swiper-slide box">
+            <img src="./images/Logo-big.png" alt="" />
+          </div>
+
+          <div class="swiper-slide box">
+            <img src="./images/Logo-big.png" alt="" />
+          </div>
+
+          <div class="swiper-slide box">
+            <img src="./images/Logo-big.png" alt="" />
+          </div>
         </div>
+      </div>
 
-        <div class="box">
-          <img src="./images/Logo-big.png" alt="">
-        </div>
+      <div class="swiper mySwiper backEnd-container">
+        <div class="swiper-wrapper row">
+          <div class="swiper-slide box">
+            <img src="./images/Logo-big.png" alt="" />
+          </div>
 
-        <div class="box">
-          <img src="./images/Logo-big.png" alt="">
-        </div>
+          <div class="swiper-slide box">
+            <img src="./images/Logo-big.png" alt="" />
+          </div>
 
-        <div class="box">
-          <img src="./images/Logo-big.png" alt="">
-        </div>
+          <div class="swiper-slide box">
+            <img src="./images/Logo-big.png" alt="" />
+          </div>
 
-        <div class="box">
-          <img src="./images/Logo-big.png" alt="">
-        </div>
+          <div class="swiper-slide box">
+            <img src="./images/Logo-big.png" alt="" />
+          </div>
 
-        <div class="box">
-          <img src="./images/Logo-big.png" alt="">
+          <div class="swiper-slide box">
+            <img src="./images/Logo-big.png" alt="" />
+          </div>
+
+          <div class="swiper-slide box">
+            <img src="./images/Logo-big.png" alt="" />
+          </div>
         </div>
       </div>
     </section>
@@ -271,5 +306,44 @@
     <a href="#home" class="top">
       <img src="./images/scroll-top-img.png" alt="">
     </a>
+    <script>
+      let frontEndContainerSwiper = new Swiper(".frontEnd-container", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        loop: true,
+        grabCursor: true,
+        centeredSlides: true,
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          991: {
+            slidesPerView: 3,
+          },
+        },
+      });
+
+      let backEndContainerSwiper = new Swiper(".backEnd-container", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        loop: true,
+        grabCursor: true,
+        centeredSlides: true,
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          991: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
   </body>
 </html>
