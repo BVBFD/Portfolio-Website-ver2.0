@@ -15,6 +15,7 @@
     <link rel="icon" type="image/png" href="./images/Logo-big.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js" integrity="sha512-pY1t/ADgTwbfGbw0+mRGd33EroA5YgRUWhQNFpPIAdBzyoSb38FsFrf4wBTcS3GFPdTfgtpRrbGCkdl2C2OXYA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -284,21 +285,24 @@
           </div>
         </div>
 
-          <form action="">
-            <input type="text" placeholder="name" class="box">
-            <input type="email" placeholder="email" class="box">
-            <input type="text" placeholder="project" class="box">
+          <form id="contact-form" action="">
+            <input type="text" name="name" placeholder="name" class="box">
+            <input type="email" name="email" placeholder="email" class="box">
+            <input type="number" name="phone" placeholder="Phone Number" class="box">
             <textarea 
-              name="" 
+              name="message" 
               id="" 
               cols="30" 
               rows="10" 
               class="box message" 
               placeholder="message"
             ></textarea>
-            <button type="submit" class="btn">
+            <a href=
+            "mailto:lsevina126@gmail.com?&amp;subject=Mr. Lee Seong Eun에게 보내는 문의사항!&amp;body=fdsgdfgsfdg
+            " type="submit" name="submit" class="btn"
+            >
               send <i class="fas fa-paper-plane"></i>
-            </button>
+            </a>
           </form>
       </div>
     </section>
@@ -306,6 +310,47 @@
     <a href="#home" class="top">
       <img src="./images/scroll-top-img.png" alt="">
     </a>
+    <script type="text/javascript">
+      (function() {
+          // https://dashboard.emailjs.com/admin/integration
+          // emailjs.init('userId');
+      })();
+
+      let formSubmit = document.querySelector("#contact-form .btn");
+      formSubmit.addEventListener('click', (event) => {
+        // event.preventDefault();
+        // let templateParams = {	
+        //   //각 요소는 emailJS에서 설정한 템플릿과 동일한 명으로 작성!
+        //   name: document.querySelector('input[name=name]').value,
+        //   phone: document.querySelector('input[name=phone]').value, 
+        //   email : document.querySelector('input[name=email]').value,
+        //   message : document.querySelector('textarea[name=message]').value
+        // };
+        
+        // emailjs.sendForm("serviceId", "templateId", "#contact-form")
+        // .then(
+        // function (response) {
+        //   console.log("SUCCESS!", response.status, response.text);
+        // },
+        // function (error) {
+        //   console.log("FAILED...", error);
+        // }
+        // );
+        // emailJS 사용하고 싶으면 태그 Button으로 바꾸고 apikey setting 하기
+          formSubmit.setAttribute('href', `mailto:lsevina126@gmail.com?&subject=Mr.%20Lee%20Seong%20Eun%EC%97%90%EA%B2%8C%20%EB%B3%B4%EB%82%B4%EB%8A%94%20%EB%AC%B8%EC%9D%98%EC%82%AC%ED%95%AD!&body=이름 : ${document.querySelector('input[name=name]').value} 휴대폰 : ${document.querySelector('input[name=phone]').value} 이메일 : ${document.querySelector('input[name=email]').value} 
+          
+          
+          
+          
+
+          
+                                        
+                      
+                                        
+                                        
+                                        메시지 : ${document.querySelector("#contact-form .message").value}`);
+        });
+    </script>
     <script>
       let frontEndContainerSwiper = new Swiper(".frontEnd-container", {
         slidesPerView: 3,
