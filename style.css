@@ -175,7 +175,7 @@ header .navbar ul li a:hover {
 }
 
 .about .heading {
-  color: #d3d3d3;
+  color: var(--lightGrey);
 }
 
 .about .row {
@@ -293,6 +293,10 @@ header .navbar ul li a:hover {
   background: url("./images/bg.jpg");
   background-position: center;
   background-size: cover;
+}
+
+.career .heading {
+  color: var(--lightGrey);
 }
 
 .career .career-container {
