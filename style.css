@@ -92,6 +92,24 @@ header .user .post {
   font-size: 2rem;
   font-weight: bolder;
   color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .user .post a {
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+header .user .post a i {
+  font-size: 2.5rem;
+  color: var(--darkGrey);
+}
+
+header .user .post a:hover i {
+  font-size: 2.8rem;
+  color: var(--lightGrey);
 }
 
 header .navbar ul {
