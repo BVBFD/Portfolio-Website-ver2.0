@@ -470,10 +470,23 @@ header .navbar ul li a:hover {
   bottom: 2rem;
   right: 2rem;
   font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background: #111;
 }
 
 .portfolio .frontEnd-container .box .contentsBox a i {
   font-size: 2rem;
+}
+
+.portfolio .frontEnd-container .box .contentsBox a:hover {
+  color: #00f7ff;
+}
+
+.portfolio .frontEnd-container .box .contentsBox a:hover i {
+  color: #ff3131;
+  font-size: 120%;
 }
 
 .portfolio .frontEnd-container .box:hover .contentsBox {
@@ -561,7 +574,7 @@ header .navbar ul li a:hover {
   font-weight: bold;
   padding: 0.5rem;
   border-radius: 5px;
-  background: #999;
+  background: #111;
 }
 
 .portfolio .backEnd-container .box .contentsBox a i {
