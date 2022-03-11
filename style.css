@@ -141,7 +141,7 @@ header .navbar ul li a:hover {
   flex-flow: column;
   padding: 0 15rem;
   background-attachment: fixed;
-  background: url("./images/bg.jpg");
+  background: url('./images/bg.jpg');
   background-position: center;
   background-size: cover;
 }
@@ -187,7 +187,7 @@ header .navbar ul li a:hover {
 }
 
 .about {
-  background: url("./images/bg9.jpg");
+  background: url('./images/bg9.jpg');
   background-position: center;
   background-size: cover;
 }
@@ -287,7 +287,7 @@ header .navbar ul li a:hover {
 
 .about .row .programmingPart .langBox .langBar::before {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   left: 0;
   width: calc(var(--i));
@@ -308,7 +308,7 @@ header .navbar ul li a:hover {
 }
 
 .career {
-  background: url("./images/bg.jpg");
+  background: url('./images/bg.jpg');
   background-position: center;
   background-size: cover;
 }
@@ -376,7 +376,7 @@ header .navbar ul li a:hover {
 }
 
 .portfolio {
-  background: url("./images/bg4.jpg");
+  background: url('./images/bg4.jpg');
   background-position: center;
   background-size: cover;
 }
@@ -433,7 +433,7 @@ header .navbar ul li a:hover {
 }
 
 .portfolio .frontEnd-container .box .contentsBox {
-  content: "";
+  content: '';
   position: relative;
   width: 100%;
   height: 100%;
@@ -521,7 +521,7 @@ header .navbar ul li a:hover {
 }
 
 .portfolio .backEnd-container .box .contentsBox {
-  content: "";
+  content: '';
   position: relative;
   width: 100%;
   height: 100%;
@@ -555,13 +555,26 @@ header .navbar ul li a:hover {
 .portfolio .backEnd-container .box .contentsBox a {
   color: lavenderblush;
   position: absolute;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 1rem;
+  right: 1rem;
   font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background: #999;
 }
 
 .portfolio .backEnd-container .box .contentsBox a i {
   font-size: 2rem;
+}
+
+.portfolio .backEnd-container .box .contentsBox a:hover {
+  color: #00f7ff;
+}
+
+.portfolio .backEnd-container .box .contentsBox a:hover i {
+  color: #ff3131;
+  font-size: 120%;
 }
 
 .portfolio .backEnd-container .box:hover .contentsBox {
@@ -573,7 +586,7 @@ header .navbar ul li a:hover {
 }
 
 .contact {
-  background: url("./images/bg3.jpg");
+  background: url('./images/bg3.jpg');
   background-size: cover;
   background-position: center;
 }
