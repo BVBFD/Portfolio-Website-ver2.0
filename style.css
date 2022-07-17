@@ -702,6 +702,15 @@ header .navbar ul li a:hover {
 }
 /* game container */
 
+/* swiper navigation arrow */
+.swiper-button-next:active {
+  transform: scale(0.8);
+}
+.swiper-button-prev:active {
+  transform: scale(0.8);
+}
+/* swiper navigation arrow */
+
 .contact {
   background: url('./images/bg3.jpg');
   background-size: cover;

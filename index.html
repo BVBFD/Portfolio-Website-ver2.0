@@ -262,6 +262,8 @@
             </div>
           </div>
         </div>
+        <div class="swiper-button-next" style="opacity: 0.85; background-color: darkred; border-radius: 50%; width: 6.5rem; height: 6.5rem; display: flex; justify-content: center; align-items: center; color: whitesmoke; padding: 2rem;"></div>
+        <div class="swiper-button-prev" style="opacity: 0.85; background-color: darkred; border-radius: 50%; width: 6.5rem; height: 6.5rem; display: flex; justify-content: center; align-items: center; color: whitesmoke; padding: 2rem;"></div>
       </div>
 
       <div class="swiper mySwiper frontEnd-container active">
@@ -355,7 +357,9 @@
               </a>
             </div>
           </div>
-        </div>
+        </div>        
+        <div class="swiper-button-next" style="opacity: 0.85; background-color: darkred; border-radius: 50%; width: 6.5rem; height: 6.5rem; display: flex; justify-content: center; align-items: center; color: whitesmoke; padding: 2rem;"></div>
+        <div class="swiper-button-prev" style="opacity: 0.85; background-color: darkred; border-radius: 50%; width: 6.5rem; height: 6.5rem; display: flex; justify-content: center; align-items: center; color: whitesmoke; padding: 2rem;"></div>
       </div>
 
       <div class="swiper mySwiper backEnd-container">
@@ -435,7 +439,9 @@
             </div>
           </div>
 
-        </div>
+        </div> 
+        <div class="swiper-button-next" style="opacity: 0.85; background-color: darkred; border-radius: 50%; width: 6.5rem; height: 6.5rem; display: flex; justify-content: center; align-items: center; color: whitesmoke; padding: 2rem;"></div>
+        <div class="swiper-button-prev" style="opacity: 0.85; background-color: darkred; border-radius: 50%; width: 6.5rem; height: 6.5rem; display: flex; justify-content: center; align-items: center; color: whitesmoke; padding: 2rem;"></div>
       </div>
     </section>
 
@@ -541,6 +547,10 @@
             slidesPerView: 3,
           },
         },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
       });
 
       let backEndContainerSwiper = new Swiper(".backEnd-container", {
@@ -559,6 +569,10 @@
           991: {
             slidesPerView: 3,
           },
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
       });
 
