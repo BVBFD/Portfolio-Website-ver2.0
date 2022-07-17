@@ -598,6 +598,110 @@ header .navbar ul li a:hover {
   transform: scale(1.2);
 }
 
+/* game container */
+.portfolio .game-container {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+.portfolio .game-container.active {
+  display: flex;
+}
+
+.portfolio .game-container .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio .game-container .box {
+  height: 30rem;
+  width: 60rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.portfolio .game-container .swiper-slide-active {
+  height: 35rem;
+}
+
+.portfolio .game-container .box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.portfolio .game-container .box .contentsBox {
+  content: '';
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #666;
+  opacity: 0.8;
+  font-size: x-large;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: lavenderblush;
+  transform: translateY(-100%);
+}
+
+.portfolio .game-container .box .contentsBox span {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.portfolio .game-container .box .contentsBox p {
+  font-size: 1.4rem;
+}
+
+.portfolio .game-container .box .contentsBox .contents {
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin-top: 2rem;
+}
+
+.portfolio .game-container .box .contentsBox a {
+  color: lavenderblush;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background: #111;
+}
+
+.portfolio .game-container .box .contentsBox a i {
+  font-size: 2rem;
+}
+
+.portfolio .game-container .box .contentsBox a:hover {
+  color: #00f7ff;
+}
+
+.portfolio .game-container .box .contentsBox a:hover i {
+  color: #ff3131;
+  font-size: 120%;
+}
+
+.portfolio .game-container .box:hover .contentsBox {
+  transform: translateY(0);
+}
+
+.portfolio .game-container .box:hover img {
+  transform: scale(1.2);
+}
+/* game container */
+
 .contact {
   background: url('./images/bg3.jpg');
   background-size: cover;
