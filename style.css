@@ -167,7 +167,7 @@ header .navbar ul li a:hover {
 }
 
 .btn {
-  padding: 0.7rem 3rem;
+  padding: 0.7rem 2rem;
   background: var(--white);
   cursor: pointer;
   margin-top: 1rem;
@@ -477,17 +477,8 @@ header .navbar ul li a:hover {
   background: #111;
 }
 
-.portfolio .frontEnd-container .box .contentsBox a i {
-  font-size: 2rem;
-}
-
-.portfolio .frontEnd-container .box .contentsBox a:hover {
+.portfolio .frontEnd-container .box .contentsBox:hover {
   color: #00f7ff;
-}
-
-.portfolio .frontEnd-container .box .contentsBox a:hover i {
-  color: #ff3131;
-  font-size: 120%;
 }
 
 .portfolio .frontEnd-container .box:hover .contentsBox {
@@ -578,17 +569,8 @@ header .navbar ul li a:hover {
   background: #111;
 }
 
-.portfolio .backEnd-container .box .contentsBox a i {
-  font-size: 2rem;
-}
-
-.portfolio .backEnd-container .box .contentsBox a:hover {
+.portfolio .backEnd-container .box .contentsBox:hover {
   color: #00f7ff;
-}
-
-.portfolio .backEnd-container .box .contentsBox a:hover i {
-  color: #ff3131;
-  font-size: 120%;
 }
 
 .portfolio .backEnd-container .box:hover .contentsBox {
@@ -681,17 +663,8 @@ header .navbar ul li a:hover {
   background: #111;
 }
 
-.portfolio .game-container .box .contentsBox a i {
-  font-size: 2rem;
-}
-
-.portfolio .game-container .box .contentsBox a:hover {
+.portfolio .game-container .box .contentsBox:hover {
   color: #00f7ff;
-}
-
-.portfolio .game-container .box .contentsBox a:hover i {
-  color: #ff3131;
-  font-size: 120%;
 }
 
 .portfolio .game-container .box:hover .contentsBox {
@@ -894,6 +867,10 @@ header .navbar ul li a:hover {
   html {
     font-size: 50%;
   }
+
+  .portfolio .game-container .box {
+    width: 95vw;
+  }
 }
 
 @media (max-width: 400px) {
@@ -919,5 +896,9 @@ header .navbar ul li a:hover {
 
   .contact .row form {
     margin: 3rem 0;
+  }
+
+  .btn {
+    font-size: 1.6rem;
   }
 }
