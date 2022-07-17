@@ -171,7 +171,8 @@ header .navbar ul li a:hover {
   background: var(--white);
   cursor: pointer;
   margin-top: 1rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
   border-radius: 5rem;
   color: var(--darkGrey);
 }
